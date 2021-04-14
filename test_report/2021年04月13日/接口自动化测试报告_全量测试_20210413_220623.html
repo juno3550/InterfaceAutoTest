@@ -1,0 +1,84 @@
+
+    <!-- CSS goes in the document HEAD or added to your external stylesheet -->
+    <style type="text/css">
+    table.hovertable {
+        font-family: verdana,arial,sans-serif;
+        font-size:10px;
+        color:#333333;
+        border-width: 1px;
+        border-color: #999999;
+        border-collapse: collapse;
+    }
+    table.hovertable th {
+        background-color:#ff6347;
+        border-width: 1px;
+        padding: 15px;
+        border-style: solid;
+        border-color: #a9c6c9;
+    }
+    table.hovertable tr {
+        background-color:#d4e3e5;
+    }
+    table.hovertable td {
+        border-width: 1px;
+        padding: 15px;
+        border-style: solid;
+        border-color: #a9c6c9;
+    }
+    </style>
+    
+    <!-- Table goes in the document BODY -->
+    
+    <head>
+    
+    <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
+    
+    </head>
+    
+    <table class="hovertable">
+    <tr>
+        <th>接口 URL</th><th>请求数据</th><th>接口响应数据</th><th>接口调用耗时(ms)</th><th>断言词</th><th>测试结果</th><th>异常信息</th>
+    </tr>
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    
+        <td>http://39.100.104.214:8080/register/</td><td>{&quot;username&quot;:&quot;juno30177&quot;,&quot;password&quot;:&quot;juno999999&quot;,&quot;email&quot;:&quot;juno123@qq.com&quot;}</td><td>{&quot;code&quot;: &quot;00&quot;, &quot;userid&quot;: 1568}</td><td>674</td><td>&quot;code&quot;: &quot;00&quot;</td><td>
+        <font color=green>
+        成功</td>
+        <td>None</td>
+    </tr>
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    
+        <td>http://39.100.104.214:8080/login/</td><td>{&quot;username&quot;:&quot;juno30177&quot;,&quot;password&quot;:&quot;4c1c1924ad2ba4d1136acee44a1b39a2&quot;}</td><td>{&quot;token&quot;: &quot;faa135c6fb88e8a0dae4ae0cd2829f0e&quot;, &quot;code&quot;: &quot;00&quot;, &quot;userid&quot;: 1568, &quot;login_time&quot;: &quot;2021-04-13 22:06:20&quot;}</td><td>470</td><td>&quot;token&quot;</td><td>
+        <font color=green>
+        成功</td>
+        <td>None</td>
+    </tr>
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    
+        <td>http://39.100.104.214:8080/register/</td><td>{&quot;username&quot;:&quot;juno30178&quot;,&quot;password&quot;:&quot;juno999999&quot;,&quot;email&quot;:&quot;juno123@qq.com&quot;}</td><td>{&quot;code&quot;: &quot;00&quot;, &quot;userid&quot;: 1569}</td><td>1042</td><td>&quot;code&quot;: &quot;00&quot;</td><td>
+        <font color=green>
+        成功</td>
+        <td>None</td>
+    </tr>
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    
+        <td>http://39.100.104.214:8080/login/</td><td>{&quot;username&quot;:&quot;juno30178&quot;,&quot;password&quot;:&quot;4c1c1924ad2ba4d1136acee44a1b39a2&quot;}</td><td>{&quot;token&quot;: &quot;dfde1a2b207a24737f52e9b58ead8b4e&quot;, &quot;code&quot;: &quot;00&quot;, &quot;userid&quot;: 1569, &quot;login_time&quot;: &quot;2021-04-13 22:06:22&quot;}</td><td>793</td><td>&quot;token&quot;</td><td>
+        <font color=green>
+        成功</td>
+        <td>None</td>
+    </tr>
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    
+        <td>http://39.100.104.214:8080/query/</td><td>{&quot;userid&quot;:1569, &quot;token&quot;:&quot;1569&quot;, &quot;title&quot;:&quot;python&quot;, &quot;content&quot;:&quot;python test&quot;}</td><td>sorry, The number of parameters does not match or you were looking for was not found.</td><td>1041</td><td>&quot;code&quot;: &quot;00&quot;</td><td>
+        <font color=red>
+        失败</td>
+        <td>Traceback (most recent call last):
+  File &quot;E:\pycharm_project_dir\InterfaceAutoTest\action\case_action.py&quot;, line 102, in execute_case
+    assert_keyword(response, data[CASE_ASSERT_KEYWORD_COL_NO])
+  File &quot;E:\pycharm_project_dir\InterfaceAutoTest\util\request_util.py&quot;, line 66, in assert_keyword
+    assert keyword in response.text
+AssertionError
+</td>
+    </tr>
+    </table>
+    
