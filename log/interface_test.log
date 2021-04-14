@@ -1,0 +1,52 @@
+2021-04-13 22:06:18 [INFO] ################################################## 测试用例集【注册&登录】开始执行 ##################################################
+2021-04-13 22:06:18 [INFO] **************************************** 开始执行接口用例【register】 ****************************************
+2021-04-13 22:06:18 [INFO] data before process: {"username":"juno${unique_num1}","password":"juno999999","email":"juno123@qq.com"}
+2021-04-13 22:06:18 [INFO] data after process: {"username":"juno30177","password":"juno999999","email":"juno123@qq.com"}
+2021-04-13 22:06:19 [INFO] 接口用例【register】请求成功！
+2021-04-13 22:06:19 [INFO] 接口响应数据：{"code": "00", "userid": 1568}
+2021-04-13 22:06:19 [INFO] 接口用例【register】断言【"code": "00"】成功！
+2021-04-13 22:06:19 [INFO] 关联数据【"userid": 1568】获取成功！
+2021-04-13 22:06:19 [INFO] **************************************** 开始执行接口用例【login】 ****************************************
+2021-04-13 22:06:19 [INFO] data before process: {"username":"juno${num1}","password":"${md5('juno999999')}"}
+2021-04-13 22:06:19 [INFO] data after process: {"username":"juno30177","password":"4c1c1924ad2ba4d1136acee44a1b39a2"}
+2021-04-13 22:06:20 [INFO] 接口用例【login】请求成功！
+2021-04-13 22:06:20 [INFO] 接口响应数据：{"token": "faa135c6fb88e8a0dae4ae0cd2829f0e", "code": "00", "userid": 1568, "login_time": "2021-04-13 22:06:20"}
+2021-04-13 22:06:20 [INFO] 接口用例【login】断言【"token"】成功！
+2021-04-13 22:06:20 [INFO] 关联数据【"token": "faa135c6fb88e8a0dae4ae0cd2829f0e"】获取成功！
+2021-04-13 22:06:20 [INFO] **************************************** 开始执行接口用例【register】 ****************************************
+2021-04-13 22:06:20 [INFO] data before process: {"username":"juno${unique_num2}","password":"juno999999","email":"juno123@qq.com"}
+2021-04-13 22:06:20 [INFO] data after process: {"username":"juno30178","password":"juno999999","email":"juno123@qq.com"}
+2021-04-13 22:06:21 [INFO] 接口用例【register】请求成功！
+2021-04-13 22:06:21 [INFO] 接口响应数据：{"code": "00", "userid": 1569}
+2021-04-13 22:06:21 [INFO] 接口用例【register】断言【"code": "00"】成功！
+2021-04-13 22:06:21 [INFO] 关联数据【"userid": 1569】获取成功！
+2021-04-13 22:06:21 [INFO] **************************************** 开始执行接口用例【login】 ****************************************
+2021-04-13 22:06:21 [INFO] data before process: {"username":"juno${num2}","password":"${md5('juno999999')}"}
+2021-04-13 22:06:21 [INFO] data after process: {"username":"juno30178","password":"4c1c1924ad2ba4d1136acee44a1b39a2"}
+2021-04-13 22:06:22 [INFO] 接口用例【login】请求成功！
+2021-04-13 22:06:22 [INFO] 接口响应数据：{"token": "dfde1a2b207a24737f52e9b58ead8b4e", "code": "00", "userid": 1569, "login_time": "2021-04-13 22:06:22"}
+2021-04-13 22:06:22 [INFO] 接口用例【login】断言【"token"】成功！
+2021-04-13 22:06:22 [INFO] 关联数据【"token": "dfde1a2b207a24737f52e9b58ead8b4e"】获取成功！
+2021-04-13 22:06:22 [INFO] ################################################## 测试用例集【注册&登录】执行成功！ ##################################################
+
+2021-04-13 22:06:22 [INFO] ################################################## 测试用例集【查询博文】开始执行 ##################################################
+2021-04-13 22:06:22 [INFO] **************************************** 开始执行接口用例【query】 ****************************************
+2021-04-13 22:06:22 [INFO] data before process: {"userid":${userid}, "token":"${token}", "title":"python", "content":"python test"}
+2021-04-13 22:06:22 [INFO] data after process: {"userid":1569, "token":"1569", "title":"python", "content":"python test"}
+2021-04-13 22:06:23 [INFO] 接口用例【query】请求成功！
+2021-04-13 22:06:23 [INFO] 接口响应数据：sorry, The number of parameters does not match or you were looking for was not found.
+2021-04-13 22:06:23 [ERROR] 接口用例【query】断言【"code": "00"】失败！
+2021-04-13 22:06:23 [ERROR] Traceback (most recent call last):
+  File "E:\pycharm_project_dir\InterfaceAutoTest\action\case_action.py", line 102, in execute_case
+    assert_keyword(response, data[CASE_ASSERT_KEYWORD_COL_NO])
+  File "E:\pycharm_project_dir\InterfaceAutoTest\util\request_util.py", line 66, in assert_keyword
+    assert keyword in response.text
+AssertionError
+
+2021-04-13 22:06:23 [INFO] ################################################## 测试用例集【查询博文】执行失败！ ##################################################
+
+2021-04-13 22:06:23 [INFO] ################################################## 测试用例集【删除博文】无需执行！ ##################################################
+
+2021-04-13 22:06:23 [INFO] 生成excel测试报告：E:\pycharm_project_dir\InterfaceAutoTest\test_result_report\2021年04月13日\接口自动化测试报告_全量测试_20210413_220623.xlsx
+2021-04-13 22:06:23 [INFO] 生成html测试报告：E:\pycharm_project_dir\InterfaceAutoTest\test_result_report\2021年04月13日\接口自动化测试报告_全量测试_20210413_220623.html
+2021-04-13 22:06:32 [INFO] 测试报告邮件发送成功!【邮件标题：接口自动化测试报告_全量测试_20210413_220623】【收件人：182230124@qq.com】
